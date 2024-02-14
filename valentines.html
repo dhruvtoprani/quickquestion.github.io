@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine's Day</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .flower {
+    margin-bottom: 20px;
+  }
+
+  .instruction {
+    display: none;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  input[type="submit"] {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 5px;
+  }
+
+</style>
+</head>
+<body>
+<div class="container">
+  <img src="https://emojicdn.elk.sh/🌹" alt="Rose" class="flower">
+  <form id="valentineForm" action="next_page.html"> <!-- Change 'next_page.html' to your actual page URL -->
+    <input type="submit" value="Yes">
+  </form>
+  <div class="instruction">
+    <p>Say "I love you" for a gift</p>
+  </div>
+</div>
+<script>
+  document.getElementById("valentineForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    window.location.href = "next_page.html"; // Change 'next_page.html' to your actual page URL
+  });
+</script>
+</body>
+</html>
